@@ -34,3 +34,25 @@ fetch(url)
     });
   })
   .catch((error) => console.log(error));
+
+function ConvertRates() {
+  const fromCurrencyCode = fromCurrency.value;
+  const toCurrencyCode = toCurrency.value;
+  let result;
+
+  //console.log(fromCurrencyCode);
+  const fromCurrencyMid = CurrencyRates.find(
+    (element) => element.code === fromCurrencyCode
+  ).mid;
+
+  const toCurrencyMid = CurrencyRates.find(
+    (element) => element.code === toCurrencyCode
+  ).mid;
+
+  result = fromCurrencyMid / toCurrencyMid;
+  console.log(result);
+
+  //console.log(fromCurrencyMid);
+}
+
+convertButton?.addEventListener("click", ConvertRates);
