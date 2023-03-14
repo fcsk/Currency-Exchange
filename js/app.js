@@ -6,6 +6,7 @@ const fromCurrency = document.getElementById("fromCurrency");
 const toCurrency = document.getElementById("toCurrency");
 const inputAmount = document.getElementById("amount");
 const convertButton = document.getElementById("convert");
+const resultspan = document.getElementById("result");
 
 // console.log(fromCurrency);
 // console.log(toCurrency);
@@ -15,7 +16,7 @@ fetch(url)
   .then((data) => {
     CurrencyRates = data[0].rates;
 
-    /* ADD polish currency to json */
+    /* ADD polish currency to CurrencyRates */
     PLN["currency"] = "polski złoty";
     PLN["code"] = "PLN";
     PLN["mid"] = 1;
@@ -38,6 +39,7 @@ fetch(url)
 function ConvertRates() {
   const fromCurrencyCode = fromCurrency.value;
   const toCurrencyCode = toCurrency.value;
+  const amount = inputAmount.value;
   let result;
 
   //console.log(fromCurrencyCode);
@@ -49,10 +51,9 @@ function ConvertRates() {
     (element) => element.code === toCurrencyCode
   ).mid;
 
-  result = fromCurrencyMid / toCurrencyMid;
-  console.log(result);
-
-  //console.log(fromCurrencyMid);
+  result = (fromCurrencyMid / toCurrencyMid) * amount;
+  result = result.toFixed(2);
+  resultspan.textContent = result;
 }
 
 convertButton?.addEventListener("click", ConvertRates);
