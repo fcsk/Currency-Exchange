@@ -53,7 +53,7 @@ function ConvertRates() {
 
   result = (fromCurrencyMid / toCurrencyMid) * amount;
   result = result.toFixed(2);
-  resultspan.textContent = result;
+  resultspan.textContent = `${result} ${toCurrencyCode}`;
 }
 
 convertButton?.addEventListener("click", ConvertRates);
