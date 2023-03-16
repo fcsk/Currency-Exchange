@@ -2,13 +2,19 @@
     margin: 0;
     padding: 0;
     background-color: rgb(255, 255, 255);
-    color:rgb(0, 0, 0)
+    color:rgb(0, 0, 0);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 header {
     display: block;
     text-align:center;
     padding: 2rem;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 form {
@@ -22,6 +28,7 @@ form label  {
 .container p  {
     background-color: rgb(247, 247, 247);
     font-size: 2rem;
+    text-align: center;
 }
 
 input[type=number] {
@@ -66,6 +73,15 @@ input[type=text], select {
     border-radius: 2rem;
 }
 
+.icon-github-circled-alt2 {
+    font-size: 3rem;
+    display: inline;
+    text-align: center;
+    margin-top: 2rem;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
 .amount-row {
     background-color:  rgb(247, 247, 247);
    
@@ -77,6 +93,10 @@ span {
 }
 
 @media only screen and (max-width: 1015px) {
+
+    .icon-github-circled-alt2 {
+        font-size: 7rem;
+    }
 
     .container {
         height: 35VH;
@@ -117,6 +137,10 @@ span {
         width: 80vw;
         border-radius: none;
 
+    }
+
+    .icon-github-circled-alt2 {
+        font-size: 10rem;
     }
     
 

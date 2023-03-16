@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/fontello.css" />
     <title>Currency exchange</title>
   </head>
   <body>
@@ -12,26 +13,25 @@
       <h1>Currency exchange</h1>
     </header>
     <div class="container">
-      <div class="formularz">
-        <form>
-          <label for="fromCurrency">From</label>
-          <select id="fromCurrency"></select>
+      <form>
+        <label for="fromCurrency">From</label>
+        <select id="fromCurrency"></select>
 
-          <label for="toCurrency">For</label>
-          <select id="toCurrency"></select>
-          <div class="amount-row">
-            <label for="amount">Amount</label>
-            <input type="number" id="amount" />
+        <label for="toCurrency">For</label>
+        <select id="toCurrency"></select>
+        <div class="amount-row">
+          <label for="amount">Amount</label>
+          <input type="number" id="amount" />
 
-            <button type="button" id="convert" class="convert-button">
-              Conversion
-            </button>
-          </div>
+          <button type="button" id="convert" class="convert-button">
+            Conversion
+          </button>
+        </div>
 
-          <p>Result: <span id="result"></span></p>
-        </form>
-      </div>
+        <p>Result: <span id="result"></span></p>
+      </form>
     </div>
+    <a class="icon-github-circled-alt2" href="https://github.com/fcsk"></a>
     <script src="js/app.js"></script>
   </body>
 </html>
