@@ -42,6 +42,8 @@ function ConvertRates() {
   const amount = inputAmount.value;
   let result;
 
+  console.log(typeof amount);
+
   //console.log(fromCurrencyCode);
   const fromCurrencyMid = CurrencyRates.find(
     (element) => element.code === fromCurrencyCode
