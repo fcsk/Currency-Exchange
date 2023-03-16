@@ -39,10 +39,10 @@ fetch(url)
 function ConvertRates() {
   const fromCurrencyCode = fromCurrency.value;
   const toCurrencyCode = toCurrency.value;
-  const amount = inputAmount.value;
+  let amount = inputAmount.value;
   let result;
 
-  console.log(typeof amount);
+  amount = changeComma(amount);
 
   //console.log(fromCurrencyCode);
   const fromCurrencyMid = CurrencyRates.find(
@@ -59,3 +59,11 @@ function ConvertRates() {
 }
 
 convertButton?.addEventListener("click", ConvertRates);
+
+function changeComma(str) {
+  if (typeof str !== "string") {
+    return str;
+  }
+  str = str.replace(",", ".");
+  return parseFloat(str);
+}
