@@ -44,7 +44,6 @@ function ConvertRates() {
 
   amount = changeComma(amount);
 
-  //console.log(fromCurrencyCode);
   const fromCurrencyMid = CurrencyRates.find(
     (element) => element.code === fromCurrencyCode
   ).mid;

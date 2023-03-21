@@ -162,3 +162,18 @@ span {
 
 
 }
+
+@media only screen and (max-width: 440px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .icon-github-circled-alt2 {
+        font-size: 7rem;
+    }
+
+}
